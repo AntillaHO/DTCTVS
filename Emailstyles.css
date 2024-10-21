@@ -1,0 +1,143 @@
+/* Basis-Styles für den Gmail-inspirierten Look */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ebee;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.email-app {
+    display: flex;
+    width: 900px;
+    height: 600px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Sticky Header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #f1f3f4;
+    width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.email-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #5f6368;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.action-btn:hover {
+    background-color: #e4e6e7;
+    border-color: #c6c8ca;
+}
+
+.email-list {
+    width: 30%;
+    background-color: #f1f3f4;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.email-list h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #5f6368;
+}
+
+.email-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.email-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.2s ease;
+}
+
+.email-item:hover {
+    background-color: #e4e6e7;
+}
+
+.email-item.unread {
+    font-weight: bold;
+}
+
+.email-sender {
+    font-size: 14px;
+    color: #1a73e8; /* Gmail Blau für die Absender */
+}
+
+.email-subject {
+    font-size: 12px;
+    color: #5f6368;
+}
+
+.email-content {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.email-display {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: #3c4043;
+}
+
+.email-display p {
+    margin-bottom: 15px;
+}
+
+.email-display h3 {
+    font-size: 16px;
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+.email-display ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Hyperlink Style */
+.email-display a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.email-display a:hover {
+    text-decoration: underline;
+}

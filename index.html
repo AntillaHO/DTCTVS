@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papier-Dokument</title>
+    <link rel="stylesheet" href="indexstyles.css">
+</head>
+<body>
+    <div class="document">
+        <h1>Formular</h1>
+        <p>Bitte füllen Sie die folgenden Informationen aus:</p>
+        <form id="nameForm">
+            <label for="vorname">Vorname:</label>
+            <input type="text" id="vorname" name="vorname" required><br>
+            <label for="nachname">Nachname:</label>
+            <input type="text" id="nachname" name="nachname" required><br>
+            <button type="submit">Abschicken</button>
+        </form>
+        <div id="output" class="output"></div>
+    </div>
+
+    <!-- Modale Warnung -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Warnung</h2>
+            <p>Dieses Spiel ist fiktiv. Alle Handlungen, Websites und Personen sind frei erfunden. 
+               Das Detectives Coop. Studio übernimmt keine Haftung für Missbrauch dieses Spiels.</p>
+            <div>
+                <input type="checkbox" id="checkbox" name="checkbox">
+                <label for="checkbox">Ich habe verstanden und akzeptiere die Warnung</label>
+            </div>
+            <button id="confirmBtn" disabled>Weiter</button>
+        </div>
+    </div>
+  <script>
+        document.getElementById('nameForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Verhindert das Standard-Formularverhalten
+
+            // Vorname und Nachname speichern
+            const firstname = document.getElementById('firstname').value;
+            const lastname = document.getElementById('lastname').value;
+
+            // Namen in localStorage speichern
+            localStorage.setItem('firstname', firstname);
+            localStorage.setItem('lastname', lastname);
+
+            // Weiterleiten zur nächsten Seite
+            window.location.href = 'Emailfach.html';
+        });
+    </script>
+    <script src="indexscript.js"></script>
+</body>
+</html>

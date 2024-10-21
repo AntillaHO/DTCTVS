@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Email-Postfach</title>
+    <link rel="stylesheet" href="Emailstyles.css">
+</head>
+<body>
+    <header class="email-header sticky-header">
+        <div class="email-actions">
+            <button class="action-btn">Löschen</button>
+            <button class="action-btn">Spam</button>
+            <button class="action-btn">Markieren</button>
+            <button class="action-btn">Archivieren</button>
+            <button class="action-btn">Papierkorb</button>
+        </div>
+    </header>
+
+    <div class="email-app">
+        <aside class="email-list">
+            <h2>Posteingang</h2>
+            <ul>
+                <li class="email-item unread" data-email-id="1">
+                    <span class="email-sender">Martin Maisarm</span>
+                    <span class="email-subject">Anweisungen</span>
+                </li>
+                <li class="email-item unread" data-email-id="2">
+                    <span class="email-sender">Kommissar Obermeyer</span>
+                    <span class="email-subject">Willkommen im Team</span>
+                </li>
+                <li class="email-item unread" data-email-id="3">
+                    <span class="email-sender">Kommissar Obermeyer</span>
+                    <span class="email-subject">Ermittlungsstand</span>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="email-content">
+            <div id="email-display" class="email-display">
+                <p>Klicken Sie auf eine E-Mail, um sie zu lesen.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="emailscript.js"></script>
+</body>
+</html>
